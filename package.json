@@ -1,0 +1,29 @@
+{
+  "name": "trailhead-mcp",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.13.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "puppeteer": "^24.3.0",
+    "zod": "^3.24.2"
+  },
+  "bin": {
+    "trailhead-mcp-build": "./build/index.js",
+    "trailhead-mcp": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "compile": "bun build src/index.ts --compile --outfile build/trailhead-mcp"
+  },
+  "files": [
+    "build"
+  ]
+}
