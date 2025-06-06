@@ -1,3 +1,4 @@
+#!/usr/bin/env bun
 import type { Browser, Page } from "puppeteer";
 import puppeteer from "puppeteer";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
